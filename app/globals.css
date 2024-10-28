@@ -30,19 +30,21 @@ body {
   outline: none !important;
   background-color: transparent !important;
   color: white !important;
+  width: max-content !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .react-calendar__tile {
-  border: none !important;
   outline: none !important;
   border-radius: 4px !important;
   font-size: medium !important;
 }
+
 .react-active-calendar-tile {
   background-color: #ABEFC6 !important;
   border: 1px solid #449E48 !important;
-  border-radius: 4px !important;
-  color: black !important;
+  border-radius: 4px !important;  
 }
 .react-calendar__month-view__days__day--weekend {
   color: white !important;

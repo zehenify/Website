@@ -1,191 +1,126 @@
-import React, {useState} from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Image from "next/image";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import { useRouter } from "next/navigation";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+import React, { useState } from "react";
 import logo from "../public/logo.png";
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Nav() {
-  const router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const [anchorEl, setAnchorEl] = useState(null);
+  const navItems = [
+    { label: 'Home', path: '/' },
+    { label: 'How it works', path: '/howItWorks' },
+    { label: 'Assessments', path: '/assesments' },
+    { label: 'Pricing Plans', path: '/pricingPlans' },
+    { label: 'About', path: '/about' },
+    { label: 'Contact', path: '/contact' },
+  ];
 
-  const openMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const closeMenu = () => {
-    setAnchorEl(null);
-  };
-
-  const bull = (
-    <Box
-      component="span"
-      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    >
-      •
-    </Box>
-  );
-
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1A2027",
-    }),
-  }));
-
-  const navigateToAbout = () => {
-    router.push("/about");
-  };
-
-  const navigateToPricingPlans = () => {
-    router.push("/pricingPlans");
-  };
-
-  const navigateToHome = () => {
-    router.push("/");
-  };
-
-  const navigateToHowItWorks = () => {
-    router.push("/howItWorks");
-  };
-
-  const navigateToContact = () => {
-    router.push("/contact");
-  };
-
-  const navigateToAssesments = () => {
-    router.push("/assesments");
-  };
   return (
-    <Box
-      component="section"
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        p: 2,
-        border: "1px",
-        bgcolor: "white",
-        color: "#006466",
-        fontSize: "20px",
-        fontWeight: "bold",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Image src={logo} alt="User Image" width={50} height={50} />
-        <span style={{ marginLeft: "8px" }}>Zehenify</span>
-      </Box>
+    <nav className="bg-white border px-4 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-2">
+          <img 
+            src={logo.src}
+            alt="Logo" 
+            className="w-12 h-12 rounded-full"
+          />
+          <span className="text-[#006466] text-3xl font-bold">Zehenify</span>
+        </div>
 
-      <Box
-        sx={{
-          display: "flex",
-          gap: 2,
-        }}
-      >
-        <Button
-          variant="text"
-          onClick={navigateToHome}
-          sx={{ color: "black", cursor: "pointer" }}
-        >
-          Home
-        </Button>
-        <Button
-          variant="text"
-          sx={{ color: "black", cursor: "pointer" }}
-          onClick={openMenu}
-        >
-          Feature's <ArrowDropDownIcon />
-        </Button>
+        <div className="hidden md:flex items-center space-x-6">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.path}
+              className="text-black hover:text-[#006466] transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+          
+          <div className="relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center text-black hover:text-[#006466] transition-colors"
+            >
+              Feature's <ChevronDown className="ml-1 w-4 h-4" />
+            </button>
+            
+            {isDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                {[1, 2, 3, 4, 5].map((item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
 
-        <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={closeMenu}>
-          <MenuItem onClick={closeMenu} sx={{ cursor: "pointer" }}>
-            1
-          </MenuItem>
-          <MenuItem onClick={closeMenu} sx={{ cursor: "pointer" }}>
-            2
-          </MenuItem>
-          <MenuItem onClick={closeMenu} sx={{ cursor: "pointer" }}>
-            3
-          </MenuItem>
-          <MenuItem onClick={closeMenu} sx={{ cursor: "pointer" }}>
-            4
-          </MenuItem>
-          <MenuItem onClick={closeMenu} sx={{ cursor: "pointer" }}>
-            5
-          </MenuItem>
-        </Menu>
+        <div className="hidden md:flex items-center space-x-4">
+          <button className="px-6 py-2 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
+            Start for free
+          </button>
+          <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+            Login
+          </button>
+        </div>
 
-        <Button
-          variant="text"
-          onClick={navigateToHowItWorks}
-          sx={{ color: "black", cursor: "pointer" }}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-black"
         >
-          How it works
-        </Button>
-        <Button
-          variant="text"
-          onClick={navigateToAssesments}
-          sx={{ color: "black", cursor: "pointer" }}
-        >
-          Assessments
-        </Button>
-        <Button
-          variant="text"
-          onClick={navigateToPricingPlans}
-          sx={{ color: "black", cursor: "pointer" }}
-        >
-          Pricing Plans
-        </Button>
-        <Button
-          variant="text"
-          onClick={navigateToAbout}
-          sx={{ color: "black", cursor: "pointer" }}
-        >
-          About
-        </Button>
-        <Button
-          variant="text"
-          onClick={navigateToContact}
-          sx={{ color: "black", cursor: "pointer" }}
-        >
-          Contact
-        </Button>
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
 
-        <Button
-          variant="text"
-          sx={{
-            color: "white",
-            bgcolor: "#006466",
-            borderRadius: "9px",
-            cursor: "pointer",
-            paddingX : "1rem",
-          }}
-        >
-          Start for free
-        </Button>
-        <Button
-          variant="text"
-          sx={{
-            color: "white",
-            bgcolor: "black",
-            borderRadius: "9px",
-            cursor: "pointer",
-            paddingX : "1rem"
-          }}
-        >
-          Login
-        </Button>
-      </Box>
-    </Box>
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t z-50">
+          <div className="px-4 py-2 space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.path}
+                className="block py-2 text-black hover:text-[#006466] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center w-full py-2 text-black hover:text-[#006466] transition-colors"
+            >
+              Feature's <ChevronDown className="ml-1 w-4 h-4" />
+            </button>
+            {isDropdownOpen && (
+              <div className="pl-4 space-y-2">
+                {[1, 2, 3, 4, 5].map((item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="block py-2 text-sm text-gray-700 hover:text-[#006466]"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            )}
+            <div className="pt-4 space-y-2">
+              <button className="w-full px-6 py-2 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
+                Start for free
+              </button>
+              <button className="w-full px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }

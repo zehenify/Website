@@ -493,7 +493,7 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Box>
+      <Box >
         <Box
           sx={{
             color: "#006466",
