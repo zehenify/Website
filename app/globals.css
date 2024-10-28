@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.react-calendar {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.react-calendar__tile {
+  border: none !important;
+  outline: none !important;
+  border-radius: 4px !important;
+  font-size: medium !important;
+}
+.react-active-calendar-tile {
+  background-color: #ABEFC6 !important;
+  border: 1px solid #449E48 !important;
+  border-radius: 4px !important;
+  color: black !important;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: white !important;
+}
+.react-calendar__tile--neighboringMonth {
+  color: gray !important;
+} 
