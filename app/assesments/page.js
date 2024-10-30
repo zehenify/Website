@@ -4,28 +4,15 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Box,
-  Grid,
-  Card,
-  CardContent,
   Typography,
   Button,
 } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-import logo from "../public/logo.png";
 import people from "../public/people.png";
 import moreAssesments from "../public/moreAssesments.png";
 import patientRecord from "../public/patientRecord.png";
 import threeScreens from "../public/threeScreens.png";
-import { VerifiedUser } from "@mui/icons-material";
 import CheckIcon from "@mui/icons-material/Check";
-import linkedin from "../public/linkedin.png";
-import facebook from "../public/facebook.png";
-import insta from "../public/insta.png";
-import twitter from "../public/twitter.png";
-import fadedLogo from "../public/fadedLogo.png";
 import assesmentsMainPic from "../public/assesmentsMainPic.png";
 import assesmentsMainSubPic from "../public/assesmentsMainSubPic.png";
 import Nav from "../nav/page";

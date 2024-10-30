@@ -4,17 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Box,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-  Button,
 } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Image from "next/image";
-import logo from "../public/logo.png";
 import Nav from "../nav/page";
 import Footer from "../footer/page";
 
