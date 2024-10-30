@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import logo from "../public/logo.png";
 import { Menu, X, ChevronDown } from 'lucide-react';
