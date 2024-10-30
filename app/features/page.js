@@ -2,50 +2,17 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import {
-  Box,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-  Button,
-} from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
-import scheduling from "../public/scheduling.png";
-import clientPortal from "../public/clientPortal.png";
-import records from "../public/records.png";
-import ePrescribe from "../public/ePrescribe.png";
-import messaging from "../public/messaging.png";
-import outcomeMeasures from "../public/outcomeMeasures.png";
-import customerSupport from "../public/customerSupport.png";
-import security from "../public/security.png";
 import ZehenifyFeatures from "../public/ZehenifyFeatures.png";
-import logo from "../public/logo.png";
-import fadedLogo from "../public/fadedLogo.png";
-import insta from "../public/insta.png";
-import facebook from "../public/facebook.png";
-import twitter from "../public/twitter.png";
-import linkedin from "../public/linkedin.png";
-import clientManagement1 from "../public/clientManagement1.png";
-import clientManagement2 from "../public/clientManagement2.png";
-import clientManagement3 from "../public/clientManagement3.png";
-import clientManagement4 from "../public/clientManagement4.png";
-import clientManagement5 from "../public/clientManagement5.png";
-import clientManagement6 from "../public/clientManagement6.png";
 import telehealth1 from "../public/telehealth1.png";
 import telehealth2 from "../public/telehealth2.png";
 import telehealth3 from "../public/telehealth3.png";
 import telehealth4 from "../public/telehealth4.png";
 import telehealth5 from "../public/telehealth5.png";
 import appointments1 from "../public/appointments1.png";
-import appointments2 from "../public/appointments2.png";
-import appointments3 from "../public/appointments3.png";
-import appointments4 from "../public/appointments4.png";
-import { ButtonBase } from "@mui/material";
 import Nav from "../nav/page";
+import Footer from "../footer/page";
 
 export default function features() {
   const router = useRouter();
@@ -1108,13 +1075,12 @@ export default function features() {
         </Box>
       )}
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
-{
-  /* <Box sx={{ flexGrow: 1, paddingTop: '20px' }}>
+/* <Box sx={{ flexGrow: 1, paddingTop: '20px' }}>
           <Grid container spacing={4} columnSpacing={-3} justifyContent="center">
 
             <Grid item xs={4} display="flex" flexDirection="column" alignItems="center">
@@ -1346,4 +1312,3 @@ export default function features() {
         </Box>
 
       </Box> */
-}

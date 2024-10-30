@@ -10,17 +10,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Image from "next/image";
-import logo from "../public/logo.png";
-import fadedLogo from "../public/fadedLogo.png";
 import PricingPackages from "../public/PricingPackages.png";
-import insta from "../public/insta.png";
-import facebook from "../public/facebook.png";
-import twitter from "../public/twitter.png";
-import linkedin from "../public/linkedin.png";
 import CheckIcon from "@mui/icons-material/Check";
 import Nav from "../nav/page";
 import Footer from "../footer/page";
