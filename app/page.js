@@ -1,6 +1,11 @@
 import Image from "next/image";
-import Nav from "./home";
+import Nav from './nav'; 
 
 export default function Home() {
-  return <Nav />;
+  return (
+    <Nav />  
+  );
 }
+
+
+
