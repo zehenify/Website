@@ -18,18 +18,18 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="bg-white border px-4 py-4">
+    <nav className="bg-white border lg:px-4 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <img 
             src={logo.src}
             alt="Logo" 
-            className="w-12 h-12 rounded-full"
+            className="md:w-12 md:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 h-10 w-10 rounded-full ml-2"
           />
-          <span className="text-[#006466] text-3xl font-bold">Zehenify</span>
+          <span className="text-[#006466] text-3xl lg:text-2xl xl:text-3xl font-bold">Zehenify</span>
         </div>
 
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -64,25 +64,25 @@ export default function Nav() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="px-6 py-2 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
+        <div className="hidden lg:flex items-center space-x-4">
+          <button className="px-3 py-2 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
             Start for free
           </button>
-          <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+          <button className="px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
             Login
           </button>
         </div>
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-black"
+          className="lg:hidden text-black"
         >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMenuOpen ? <X className="w-6 h-6 mr-4" /> : <Menu className="w-6 h-6 mr-4" />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t z-50">
+        <div className="lg:hidden absolute top-16 left-0 right-0 bg-white border-t z-50">
           <div className="px-4 py-2 space-y-2">
             {navItems.map((item) => (
               <a
@@ -113,10 +113,10 @@ export default function Nav() {
               </div>
             )}
             <div className="pt-4 space-y-2">
-              <button className="w-full px-6 py-2 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
+              <button className="w-full px-6 bg-[#006466] text-white rounded-lg hover:bg-[#005557] transition-colors">
                 Start for free
               </button>
-              <button className="w-full px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+              <button className="w-full px-6 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
                 Login
               </button>
             </div>
