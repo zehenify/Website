@@ -1,21 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
 import Image from "next/image";
 import mainPic from "../public/mainPic.png";
 import CompliantSecure from "../public/CompliantSecure.png";
@@ -23,7 +14,6 @@ import goPaperless from "../public/goPaperless.png";
 import saveTime from "../public/saveTime.png";
 import empowerClients from "../public/empowerClients.png";
 import user from "../public/user.png";
-import logo from "../public/logo.png";
 import scheduling from "../public/scheduling.png";
 import clientPortal from "../public/clientPortal.png";
 import records from "../public/records.png";
@@ -32,19 +22,10 @@ import messaging from "../public/messaging.png";
 import outcomeMeasures from "../public/outcomeMeasures.png";
 import customerSupport from "../public/customerSupport.png";
 import security from "../public/security.png";
-import WhoWeAre from "../public/WhoWeAre.png";
-import OurPeopleSuccess from "../public/OurPeopleSuccess.png";
-import fadedLogo from "../public/fadedLogo.png";
-import twitter from "../public/twitter.png";
-import insta from "../public/insta.png";
-import linkedin from "../public/linkedin.png";
-import facebook from "../public/facebook.png";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import { ButtonBase } from "@mui/material";
 import Nav from "../app/nav/page";
 import Footer from "../app/footer/page";
@@ -73,11 +54,6 @@ export default function Home() {
       >
         <Box
           sx={{
-            // position: 'absolute',
-            // top: '0',
-            // left: '0',
-            // right: '0',
-            // bottom: '0',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

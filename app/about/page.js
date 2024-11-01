@@ -3,18 +3,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Box, Typography, Button } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-import logo from "../public/logo.png";
-import fadedLogo from "../public/fadedLogo.png";
 import AboutZehenify from "../public/AboutZehenify.png";
 import WhoWeAre from "../public/WhoWeAre.png";
-import insta from "../public/insta.png";
-import facebook from "../public/facebook.png";
-import twitter from "../public/twitter.png";
-import linkedin from "../public/linkedin.png";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";

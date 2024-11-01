@@ -7,7 +7,6 @@ import img from "../../public/user.png";
 
 export default function Component() {
   const [date, setDate] = useState(new Date());
-  const [clinicianCount, setClinicianCount] = useState("");
 
   return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100 py-24 px-72">
