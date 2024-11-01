@@ -11,15 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/contact/page": [
+    "/pricingPlans/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/howItWorks/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/howItWorks/page.js"
+      "static/chunks/app/pricingPlans/page.js"
     ],
     "/about/page": [
       "static/chunks/webpack.js",
