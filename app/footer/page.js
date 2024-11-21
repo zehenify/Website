@@ -41,7 +41,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="w-full lg:w-1/4 text-left lg:text-right flex justify-center items-center sm:gap-8 gap-8 lg:flex-col lg:gap-0">
+        {/* <div className="w-full lg:w-1/4 text-left lg:text-right flex justify-center items-center sm:gap-8 gap-8 lg:flex-col lg:gap-0">
           <div className="lg:flex-col sm:flex-row flex-col flex items-center justify-center gap-3 sm:gap-5">
             <p className="text-sm ">Enroll Yourself now</p>
             <div className="flex flex-col sm:flex-col lg:flex-col">
@@ -70,7 +70,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <hr className="lg:my-8 sm:my-4" />
       <div className="text-center my-4 text-sm">
