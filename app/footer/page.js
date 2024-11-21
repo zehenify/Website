@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full lg:w-1/4 text-left lg:text-right flex justify-center items-center sm:gap-8 gap-8 lg:flex-col lg:gap-0">
-          <div className="lg:flex-col sm:flex-row flex-col flex items-center justify-center gap-3 sm:gap-5">
+          {/* <div className="lg:flex-col sm:flex-row flex-col flex items-center justify-center gap-3 sm:gap-5">
             <p className="text-sm ">Enroll Yourself now</p>
             <div className="flex flex-col sm:flex-col lg:flex-col">
               <button className="bg-[#006466] text-white px-4 py-2 rounded mb-2 w-full sm:w-full lg:w-full">
@@ -52,7 +52,7 @@ export default function Footer() {
                 Start for free
               </button>
             </div>
-          </div>
+          </div> */}
           <div className="lg:flex-col flex sm:flex-row flex-col sm:gap-8 lg:gap-0 gap-5 justify-center items-center text-center">
             <p className="text-sm  lg:mt-4">Follow us on</p>
             <div className="lg:mt-2 flex justify-start lg:justify-end lg:space-x-4 space-x-2">
